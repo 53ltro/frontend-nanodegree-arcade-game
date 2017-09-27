@@ -22,7 +22,7 @@ Enemy.prototype.update = function(dt) {
     //when enemy is done moving across screen, reset to move again
     if (this.x > 550){
         this.x = -100;
-        this.sped = 100 + Math.floor(Math.random() * 512);
+        this.sped = 100 + Math.floor(Math.random() * 500);
     }
 
     //enemy and player collision
@@ -88,7 +88,7 @@ Player.prototype.handleInput = function(keyPress) {
             break;
         case 'down':
             this.y += this.speed + 30;
-            break;            
+            break;
     }
 };
 
@@ -103,7 +103,7 @@ var player = new Player(200, 380, 50);
 var enemy;
 
 enemyPosition.forEach(function(posY) {
-    enemy = new Enemy(0, posY, 100 + Math.floor(Math.random() * 512));
+    enemy = new Enemy(0, posY, 100 + Math.floor(Math.random() * 500));
     allEnemies.push(enemy);
 });
 
